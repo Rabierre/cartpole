@@ -54,6 +54,7 @@ with tf.Session() as sess:
 				action = np.argmax(Qs)
 
 			new_state, reward, done, _ = env.step(action)
+			print(new_state)
 			if done:
 				Qs[0, action] = -100
 			else:
